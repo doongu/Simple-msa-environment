@@ -28,7 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install flask
         sudo python3 app.py
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Upload to AWS
       env:
         AWS_HOST: ${{ secrets.AWS_HOST }}
