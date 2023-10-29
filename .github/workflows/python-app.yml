@@ -27,10 +27,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flask
-    - name: Run the app
-      run: |
-        source venv/bin/activate
-        sudo python app.py
     - name: Upload to AWS and run
       env:
         AWS_HOST: ${{ secrets.AWS_HOST }}
