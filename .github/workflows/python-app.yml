@@ -30,7 +30,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: run flask
       run: |
-        python3 app.py
+        sudo python3 app.py
     - name: Upload to AWS
       env:
         AWS_HOST: ${{ secrets.AWS_HOST }}
