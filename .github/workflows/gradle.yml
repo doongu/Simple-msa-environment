@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [ "master" ]
 
+
 env:
   AWS_REGION: ap-northeast-2
   S3_BUCKET_NAME: cherish-github-actions-s3-bucket
