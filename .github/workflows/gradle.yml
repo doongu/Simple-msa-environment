@@ -60,10 +60,8 @@ jobs:
       env:
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: |
-       aws s3 cp \
-       --region ap-northeast-2 \
-       ./springboot-intro-build.zip s3://cherish-github-actions-s3-bucket/
+      run: aws deploy push --application-name cicid-test-CD --ignore-hidden-files --s3-location s3://cicd-test-cd/cicdtest/$GITHUB_SHA.zip --source .
+
 
     # # (5) 빌드 결과물을 S3 버킷에 업로드
     # - name: Upload to AWS S3
