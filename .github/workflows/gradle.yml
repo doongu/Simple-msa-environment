@@ -46,8 +46,8 @@ jobs:
       run: zip -r ./$GITHUB_SHA.zip .
       shell: bash
     
-    - name: Copy script
-      run: cp ./scripts/*.sh ./deploy
+    # - name: Copy script
+    #   run: cp ./scripts/*.sh ./deploy
       
       # AWS 세팅
     - name: Configure AWS credentials
