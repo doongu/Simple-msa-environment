@@ -14,6 +14,6 @@ public class firstController {
 
     @RequestMapping("/restTest")
     public String restTest(@RequestParam String str){
-        return str + " : Rest Test 완료!!!!";
+        return str + " : Rest Test 완료@@@@";
     }
 }
